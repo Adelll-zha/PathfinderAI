@@ -55,6 +55,9 @@ The DLL exposes the following parameters:
 | `PathfinderAI_LogisticRegression.strlogic` | variable string | Retrieves all the last results of the logistic regression model in a string | NaN                | NaN         |
 
 
+### Thanks ❤️
+
+
 
 
 
