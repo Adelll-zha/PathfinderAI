@@ -39,6 +39,38 @@ The primary purposes of PathfinderAI include:
 - **Method**: `PathfinderAI_LogisticRegression.Run()`
 - **Description**: Implements logistic regression to predict price trends based on historical data.
 
+# PathfinderAI Console Commands
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `Set 0s/1h` | Set the realization period to 0s/1h. | `Set 0s/1h` |
+| `Set 1h/2h` | Set the realization period to 1h/2h (⚠️ obsoleted). | `Set 1h/2h` |
+| `Set 1h/1d` | Set the realization period to 1h/1d. | `Set 1h/1d` |
+| `Set more 1d` | Set the realization period to +1d. | `Set more 1d` |
+| `Set BTCUSDT` | Set the target crypto/currency as BTCUSDT. | `Set BTCUSDT` |
+| `Set EURUSDT` | Set the target crypto/currency as EURUSDT. | `Set EURUSDT` |
+| `Set ETHUSDT` | Set the target crypto/currency as ETHUSDT. | `Set ETHUSDT` |
+| `Set SOLUSDT` | Set the target crypto/currency as SOLUSDT. | `Set SOLUSDT` |
+| `MLR/PathfinderAI` | Perform multiple linear regression on the data. | `MLR/PathfinderAI {float number}` |
+| `Poly/GETmov/PathfinderAI` | Perform polynomial regression on the data and indicate the movement. | `Poly/GETmov/PathfinderAI string + {float number}` |
+| `Poly&&MLR=?/PathfinderAI` | Compare the results of both regressions. If both indicate the same movement, the % is almost zero. | `Poly&&MLR=?/PathfinderAI string + {float number} + string + {float number}` |
+| `LogicalRegress/PathfinderAI` | Perform logistic regression on the data. | `LogicalRegress/PathfinderAI string[bytes]` |
+
+## Comparing MLR and Polynomial Regression
+
+Comparing Multiple Linear Regression (MLR) and Polynomial Regression is crucial for choosing the right model based on the characteristics of the data and the desired prediction horizon.
+
+### When to Use MLR:
+- **Short Distances:** MLR is more suitable for short-term predictions where the relationship between variables is relatively linear.
+
+### When to Use Polynomial Regression:
+- **Long Distances:** Polynomial Regression is effective for capturing non-linear relationships, making it preferable for long-term predictions where the underlying trends may exhibit curvature.
+
+### Comparative Analysis:
+- **Identical Predictions:** If MLR and Polynomial predictions are identical, it may indicate that the data trends are relatively linear, and either model can be chosen.
+- **Different Predictions:** If predictions differ, consider using MLR for short distances and Polynomial Regression for long distances, optimizing the model selection based on prediction accuracy.
+
+
 ## DLL Parameters
 The DLL exposes the following parameters:
 
