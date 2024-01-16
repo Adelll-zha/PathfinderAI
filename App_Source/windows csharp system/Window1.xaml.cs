@@ -22,7 +22,7 @@ namespace XboxGameBarApp
     /// </summary>
     public partial class Window1 : Window
     {
-        // Créer un Timer avec un intervalle de 20 secondes
+        // Create timer
         private static Timer timer = new Timer(2500);
         public string url = "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=524";
         public string a = "BTCUSDT";
