@@ -39,6 +39,21 @@ The primary purposes of PathfinderAI include:
 - **Method**: `PathfinderAI_LogisticRegression.Run()`
 - **Description**: Implements logistic regression to predict price trends based on historical data.
 
+## DLL Parameters
+The DLL exposes the following parameters:
+
+| Name                            | Type   | Description                                           | Required Arguments | Arg Type    |
+|---------------------------------|--------|-------------------------------------------------------|--------------------|-------------|
+| `PathfinderAI_PolynomialRegression`  | class  | Perform an action on polynomial regression data      | NaN                | NaN         |
+| `PathfinderAI_PolynomialRegression.Predict()` | string | Perform polynomial regression on data            | 1                  | string(url) |
+| `PathfinderAI`                   | class  | Perform an action on data with a basic MLR model     | NaN                | NaN         |
+| `PathfinderAI.Predict()`         | string | Perform MLR regression on data                      | 1                  | string(url) |
+| `PathfinderAI.GetCurrentBitcoinPrice()` | string | Retrieve the current price of the target crypto/currency | 1                  | string(url) |
+| `PathfinderAI.lasterror`         | variable string | Display a sum of errors before the last predictions | NaN                | NaN         |
+| `PathfinderAI_LogisticRegression` | class  | Perform an action on data with a basic logistic model | NaN                | NaN         |
+| `PathfinderAI_LogisticRegression.Run()` | string | Perform logistic regression on data                | 1                  | string(url) |
+| `PathfinderAI_LogisticRegression.strlogic` | variable string | Retrieves all the last results of the logistic regression model in a string | NaN                | NaN         |
+
 
 
 
